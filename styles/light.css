@@ -4,6 +4,7 @@
   переключая тему
 */
 :root.theme-light {
+  --bg-image: url("../images/cover-image-light.png");
   --bg-color: #FFC2E6;
   --title-color: #ffc2e6;
   --subtitle-color: #FF8DCB;
@@ -19,6 +20,7 @@
 
 @media (prefers-color-scheme: light) {
 :root {
+  --bg-image: url("../images/cover-image-light.png");
   --bg-color: #FFC2E6;
   --title-color: #ffc2e6;
   --subtitle-color: #FF8DCB;
@@ -33,6 +35,7 @@
 
 /* Остальные стили */ 
 .page.theme_light {
+  --bg-image: url("../images/cover-image-light.png");
   --bg-color: #FFC2E6;
   --title-color: #ffc2e6;
   --subtitle-color: #FF8DCB;
