@@ -9,14 +9,6 @@
   background-attachment: fixed;
 }
 
-.theme_dark{
-  background-image: url("../images/cover-image-dark.png");
-}
-
-.theme_light{
-  background-image: url("../images/cover-image-light.png");
-}
-
 .decorated-zone{
   display: grid;
   align-items: center;
