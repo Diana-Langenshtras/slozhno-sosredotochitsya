@@ -12,6 +12,7 @@
   --subtitle-text-color: #000028;
   --text-color: #f1b2ce;
   --decor-color: var(--accent-color);
+  --hover-color: rgba(255, 0, 112, 0.4);
 }
 
 .page.theme_dark {
@@ -23,6 +24,7 @@
   --subtitle-text-color: #000028;
   --text-color: #f1b2ce;
   --decor-color: var(--accent-color);
+  --hover-color: rgba(255, 0, 112, 0.4);
 
   .header__rec {
     visibility: visible;

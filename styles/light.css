@@ -11,7 +11,8 @@
   --text-color: #353430;
   --decor-color: var(--subtitle-color);
   --accent-color: var(--text-color);
-  --subtitle-text-color: var(--text-color);   
+  --subtitle-text-color: var(--text-color);
+  --hover-color: rgba(50, 49, 45, 0.4);  
 }
 
 @media (prefers-color-scheme: light) {
@@ -23,7 +24,8 @@
   --text-color: #353430;
   --decor-color: var(--subtitle-color);
   --accent-color: var(--text-color);
-  --subtitle-text-color: var(--text-color);   
+  --subtitle-text-color: var(--text-color);  
+  --hover-color: rgba(50, 49, 45, 0.4);  
   }
 }
 
@@ -36,6 +38,7 @@
   --decor-color: var(--subtitle-color);
   --accent-color: var(--text-color);
   --subtitle-text-color: var(--text-color);
+  --hover-color: rgba(50, 49, 45, 0.4); 
 
   .header__rec {
     visibility: hidden;
