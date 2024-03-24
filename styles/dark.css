@@ -12,7 +12,6 @@
   --subtitle-text-color: #000028;
   --text-color: #f1b2ce;
   --decor-color: var(--accent-color);
-  --font-family: 'IBM Plex mono', sans-serif;
 }
 
 .page.theme_dark {
@@ -24,6 +23,9 @@
   --subtitle-text-color: #000028;
   --text-color: #f1b2ce;
   --decor-color: var(--accent-color);
-  --font-family: 'IBM Plex mono', sans-serif;
+
+  .header__rec {
+    visibility: visible;
+  }
 }
 

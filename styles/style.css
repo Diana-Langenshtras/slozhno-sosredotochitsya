@@ -9,15 +9,7 @@
   background-attachment: fixed;
 }
 
-.decorated-zone{
-  display: grid;
-  align-items: center;
-  position: relative;
-  min-height: 668px;
-  height: 100vh;
-}
-
-.decorated-zone::before{
+.decorated-zone::before {
   position: absolute;
   content:" ";
   width: 25px;
@@ -29,7 +21,7 @@
   inset-block-start: 10px;
 }
 
-.decorated-zone::after{
+.decorated-zone::after {
   position: absolute;
   content:" ";
   width: 25px;
@@ -42,13 +34,19 @@
   inset-block-end: 10px;
 }
 
-.header{
+.header {
+  display: grid;
+  align-items: center;
+  position: relative;
+  min-height: 668px;
+  height: 100vh;
   padding: 10px;
   grid-template-rows: 1fr min-content 1fr;
   justify-items: end;
 }
 
-.header__rec{
+.header__rec {
+  visibility: hidden;
   align-self: start;
   position: absolute;
   inset-block-start: 10px;
@@ -62,7 +60,7 @@
   text-transform: uppercase;
 }
 
-.header__rec::after{
+.header__rec::after {
   display: inline-block;
   content:" ";
   border-radius: 100%;
@@ -74,7 +72,7 @@
   margin-block-end: 2px;
 }
 
-.header__theme-menu-list{
+.header__theme-menu-list {
   display: flex;
   flex-direction: column;
   gap: 13px;
@@ -82,7 +80,8 @@
   margin: 0;
 }
 
-.header__theme-menu-button{
+.header__theme-menu-button {
+  cursor: pointer;
   background-color: transparent;
   border: none;
   text-transform: lowercase;
@@ -94,20 +93,21 @@
   padding: 0 13px;
 }
 
-.header__theme-menu-button_active{
+.header__theme-menu-button_active {
   pointer-events: none;
+  outline: 1px solid currentColor;
 }
 
-.header__theme-menu-button:focus-visible{
+.header__theme-menu-button:focus-visible {
   outline: none;
   border-bottom: 1px solid currentColor;
 }
 
-.header__theme-menu-button:hover{
-  outline: 1px solid currentColor;
+.header__theme-menu-button:hover {
+  outline: 1px solid rgba(255, 0, 112, 0.4);
 }
 
-.header__title{
+.header__title {
   justify-self: start;
   font-family: var(--font-family);
   font-weight: bold;
@@ -118,12 +118,11 @@
   text-transform: lowercase;
 }
 
-.header__subtitle{
-  white-space: pre-line;
+.header__subtitle {
   max-width: 491px;
 }
 
-.title-decor{
+.title-decor {
   background-color: var(--subtitle-color);
   font-family: var(--font-family);
   font-weight: bold;
@@ -132,20 +131,20 @@
   color: var(--subtitle-text-color);
 }
 
-.content{
+.content {
   display: grid;
   grid-template-rows: repeat(4, min-content);
   padding: 40px 10px 0;
   gap: 50px;
 }
 
-.content__section{
+.content__section {
   display: grid;
   grid-template-columns: 1fr;
   gap: 20px;
 }
 
-.content__title{
+.content__title {
   font-family: var(--font-family);
   font-weight: bold;
   font-size: 18px;
@@ -153,21 +152,21 @@
   color: var(--accent-color);
 }
 
-.content__list{
+.content__list {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-.card__title ~ .content__list{
+.card__title ~ .content__list {
   padding-top: 20px;
 }
 
-.card__subtitle{
+.card__subtitle {
   font-weight: 400;
 }
 
-.card__text{
+.card__text {
   padding-block-start: 10px;
   font-family: var(--font-family);
   font-weight: 400;
@@ -176,46 +175,52 @@
   color: var(--text-color);
 }
 
-.text-link{
+.text-link {
   text-shadow: 2px 1px 0 var(--decor-color);
+  text-decoration: none;
 }
 
-.text-link:focus-visible{
+.text-link:focus-visible {
   outline: none;
   border-bottom: 1px solid currentColor;
 }
 
-.text-link:hover{
+.text-link:hover {
   outline: 1px solid currentColor;
 }
 
-.content__images{
+.content__images {
   display: grid;
   grid-template-columns: 1fr;
   gap: 10px;
 }
 
-.content__images-wrapper{
+.content__images-wrapper {
   display: grid;
   gap: 10px;
   grid-template-columns: repeat(1, 1fr);
 }
 
-.content__images-image{
+.content__images-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
 }
 
-.footer{
+.footer {
+  display: grid;
+  align-items: center;
+  position: relative;
+  min-height: 668px;
+  height: 100vh;
   padding: 10px;
   grid-template-rows: 1fr;
   justify-items: center;
   margin-block-start: 40px;
 }
 
-.footer__title{
+.footer__title {
   font-family: var(--font-family);
   font-weight: 700;
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
@@ -226,34 +231,34 @@
 }
 
 @media (width >= 768px) {
-  .header{
+  .header {
     padding: 20px 20px 20px 0;
   }
 
-  .decorated-zone::before{
+  .decorated-zone::before {
     inset-inline-end: 20px;
     inset-block-start: 20px;
   }
 
-  .decorated-zone::after{
+  .decorated-zone::after {
     inset-inline-start: 20px;
     inset-block-end: 20px;
   }
 
-  .header__rec{
+  .header__rec {
     inset-block-start: 20px;
     inset-inline-end: 30px;
   }
 
-  .header__title{
+  .header__title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 
-  .header__subtitle{
+  .header__subtitle {
     max-width: 364px;
   }
 
-  .content{
+  .content {
     padding: 60px 20px 0;
     gap: 80px;
   }
@@ -262,21 +267,21 @@
     grid-template-columns: 1fr 2fr;
   }
 
-  .section-decor{
+  .section-decor {
     grid-template-columns: 1fr;
   }
 
-  .section-decor .content__title{
+  .section-decor .content__title {
     max-width: 236px;
   }
 
-  .content__images{
+  .content__images {
     gap: 20px;
   }
 
-  .content__images-wrapper{
+  .content__images-wrapper {
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto dense;
+    grid-auto-flow: dense;
     gap: 20px;
   }
 
@@ -296,36 +301,36 @@
     grid-column: span 2;
   }
 
-  .footer{
+  .footer {
     margin-block-start: 60px;
   }
 
-  .footer__title{
+  .footer__title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 } 
 
 @media (width >= 1024px) {
-  .header__theme-menu-list{
+  .header__theme-menu-list {
     flex-direction: row;
     padding-inline-start: 20px;
     gap: 11px;
   }
 
-  .header__theme-menu{
+  .header__theme-menu {
     justify-self: center;
     align-self: self-start;
   }
 
-  .header__subtitle{
+  .header__subtitle {
     max-width: 491px;
   }
 
-  .content__section{
+  .content__section {
     gap: 12px;
   }
 
-  .section-decor{
+  .section-decor {
     grid-template-columns: 1fr;
     gap: 20px;
   }
@@ -334,7 +339,7 @@
     max-width: 355px;
   }
 
-  .list-decor{
+  .list-decor {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
   }
